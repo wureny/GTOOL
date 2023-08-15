@@ -1,6 +1,6 @@
 package slice
 
-import "GTOOL/internal/errs"
+import "github.com/wureny/GTOOL/internal/errs"
 
 func Add[T any](src []T, ele T, index int) ([]T, error) {
 	le := len(src)

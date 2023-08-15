@@ -1,6 +1,6 @@
 package slice
 
-import "GTOOL/internal/errs"
+import "github.com/wureny/GTOOL/internal/errs"
 
 func Delete[T any](src []T, index int) ([]T, T, error) {
 	le := len(src)
