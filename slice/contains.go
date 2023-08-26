@@ -14,7 +14,8 @@ func ContainsFunc[T any](src []T, equal func(src T) bool) ([]int, bool) {
 		}
 	}
 	if len(arr) == 0 {
-		return nil, false
+		var tmp []int
+		return tmp, false
 	}
 	return arr, true
 }
