@@ -8,7 +8,7 @@ type List[T any] interface {
 	Delete(index int) (T, error)
 	Len() int
 	Cap() int
-	Range(fn func(index int, t T) error) error
+	Range(index int, fn func(index int, t T) error) error
 	// AsSlice 将 List 转化为一个切片
 	// 不允许返回nil，在没有元素的情况下，
 	// 必须返回一个长度和容量都为 0 的切片
