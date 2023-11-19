@@ -28,7 +28,8 @@ type BlockingQueue[T any] interface {
 // Refer to BlockingQueue blocking queue
 // Whether a queue follows FIFO depends on the implementation
 type Queue[T any] interface {
-	// Enqueue puts elements into the queue. If the queue is full at this time, an error is returned.	Enqueue(t T) error
+	// Enqueue puts elements into the queue. If the queue is full at this time, an error is returned.
+	Enqueue(t T) error
 	// Dequeue gets an element from the head of the queue
 	// If there are no elements in the queue at this time, then return an error
 	Dequeue() (T, error)
