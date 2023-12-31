@@ -2,6 +2,7 @@ package queue
 
 import (
 	"context"
+	"unsafe"
 )
 
 // BlockingQueue blocking queue
@@ -33,4 +34,9 @@ type Queue[T any] interface {
 	// Dequeue gets an element from the head of the queue
 	// If there are no elements in the queue at this time, then return an error
 	Dequeue() (T, error)
+}
+
+type node[T any] struct {
+	Val  T
+	Next unsafe.Pointer
 }
